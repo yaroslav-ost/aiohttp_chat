@@ -2,8 +2,7 @@ import asyncio
 import logging
 import utils
 from aiohttp import web
-
-from chat_demo import views
+import views
 
 
 async def init_app():
