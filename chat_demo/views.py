@@ -19,7 +19,7 @@ async def kick_user(app, current_ws, group_id, current_username, target_username
         if admin_name == current_username:
             if target_username in app['chat'][group_id]['users'].keys():
                 response_body['is_success'] = True
-                response_body['message'] = f'OK'
+                response_body['message'] = 'OK'
                 target_user_ws = app['chat'][group_id]['users'][target_username]
                 await target_user_ws.close()
             else:
@@ -43,7 +43,7 @@ async def join_group(app, current_ws, group_id, username):
 
                     last_messages = app['chat'][group_id]['events'][-settings.MAX_MESSAGE_TO_STORE:]
                     response_body['is_success'] = True
-                    response_body['message'] = f'OK'
+                    response_body['message'] = 'OK'
                     response_body['chat_history'] = last_messages
                     app['chat'][group_id]['users'][username] = current_ws
                     app['chat'][group_id]['users_count'] += 1
