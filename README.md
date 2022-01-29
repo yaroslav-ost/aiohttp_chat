@@ -1,6 +1,6 @@
 # aiohttp_chat
 # Installation 
-You need to sync  the dependecies mentioned on the Pipfile. Run
+You need to sync  the dependecies mentioned on the Pipfile. Run the command below in the folder:
 ```shell
 pipenv sync
 ```
